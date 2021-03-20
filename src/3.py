@@ -71,7 +71,7 @@ def get_html_without_num(url):
 
 j = 0
 writeTrIndex = 0
-for i in range(1, 3083):
+for i in range(1, 3):
     soup = BeautifulSoup(get_html("http://hngcjs.hnjs.gov.cn/company/list?page=" + str(i), 'lxml'))
     divContent = soup.find("div", id="tagContenth0")
     t = divContent.find("tr")
