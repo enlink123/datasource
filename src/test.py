@@ -12,6 +12,8 @@ def get_html(url,num):
         'User-Agent':'Mozilla/5.0(Macintosh; Intel Mac OS X 10_11_4)\
         AppleWebKit/537.36(KHTML, like Gecko) Chrome/52 .0.2743. 116 Safari/537.36'
     }
+
+
     params ={
         "__EVENTTARGET":"AspNetPager2",
         "__EVENTARGUMENT":num,
@@ -39,15 +41,9 @@ for i in range(1,5):
                     pass
                 else:
                     arrays.append(tb.string)
-
-    # if i != 100:
-    #     arrays.pop((i-1)*20*5)
-
 for i in range(len(arrays)):
     print(arrays[i])
     worksheet.write(int(i/5), i%5, arrays[i])
-
-
 #workbook.save("/Users/jinyh/workspace/test1.xls")
 
 
